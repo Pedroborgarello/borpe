@@ -1,0 +1,44 @@
+.buzosNovedades{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	.buzoBlanco{
+		background-image: linear-gradient(to left, #1f1f1f, #242424, #292929, #2e2e2e, #333333);
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		img{
+			padding: 2px;
+			margin: 10px;
+			border: 2px solid $grisclaro;
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+			-webkit-box-shadow: 0 0 10px 5px #171717;
+			box-shadow: 0 0 10px 5px #171717;
+			transition: 0.2s;
+			&:hover{
+				transform: scale(1.01);
+			}
+		}
+	}
+	.buzoNegro{
+		background-image: linear-gradient(to right, #807f7f, #898989, #939293, #9c9c9c, #a6a6a6);
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		img{
+			padding: 2px;
+			margin: 10px;
+			border: 2px solid $grisoscuro;
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+			-webkit-box-shadow: 0 0 10px 05px $colorsombras;
+			box-shadow: 0 0 10px 05px $colorsombras;
+			transition: 0.2s;
+			&:hover{
+				transform: scale(1.01);
+			}
+		}
+	}
+}
+			

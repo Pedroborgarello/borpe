@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+body{
+	font-family: $font;
+	font-weight: $fontregular;
+}
+
+@each $size in $sizes{
+	.fontSize-#{$size}{
+		font-size: $size;
+	}
+}
+
+@each $key, $val in $fontWeight{
+	.font-#{$key}{
+		font-weight: $val;
+	}
+}

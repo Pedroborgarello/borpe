@@ -1,0 +1,29 @@
+.nosotros{
+	background-color: $grisclaro;
+	.noImg{
+		padding: 0;
+	}
+	.noText{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		h3{
+			text-transform: uppercase;
+		}
+	}
+}
+.nosotros2{
+	background-color: $grisoscuro;
+	.noImg{
+		padding: 0;
+	}
+	.noText{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: $grisclaro;
+		h3{
+			text-transform: uppercase;
+		}
+	}
+}

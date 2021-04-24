@@ -1,0 +1,215 @@
+body{
+	background-color: $grismedio;
+}
+.grid{
+	display: grid;
+	grid-template-areas:
+	"header"
+	"body"
+	"footer"
+	;
+	grid-template-rows: 145px auto 300px;
+	grid-template-columns: 100%
+}
+.header{
+	background-image: $gradiente;
+	position: sticky;
+	top: 0;
+	z-index: 1060;	
+	.logo{
+		display: flex;
+		align-items: center;
+	}
+	.tituloNav{	
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		.titulo{
+			color: $grisclaro;
+			/*font-size: 50px;*/
+			font-style: italic;
+			font-family: $font;
+			text-transform: uppercase; 
+			h1{
+				/*font-weight: $fontbold;*/
+				/*font-size: 90px;*/
+			}
+		}	
+		.botonera{
+			text-transform: uppercase;
+			list-style-type: none;
+			letter-spacing: 4px;
+			display: flex;
+			li{
+				/*font-weight: $fontregular;*/
+				display: flex;
+				justify-content: space-between;
+				padding: 0px 10px 7px 10px;
+				a{
+					color: $grisclaro;
+					text-decoration: none;
+					transition: 0.1s;
+					&:hover{
+						color: $grismedio;
+						transform: scale(1.05);
+					}
+				}
+				.subBotonera{
+					background-color: $grisoscuro;
+				}
+			}
+		}
+	}
+	.ingresar{
+		display: flex;
+		align-items: center;
+		font-family: $font;
+		text-transform: uppercase;
+		.botonIng{
+			margin-bottom: 10px;
+			background-color: $grisclaro;
+			color: $grisoscuro;
+			border: solid 1px $grisoscuro;
+			&:hover{
+				background-color: $grisoscuro;
+				color: $grisclaro;
+				border: solid 1px $grisclaro;
+			}
+		}	
+	}	
+	form button{
+		background-color: $grisclaro;
+		color: $grisoscuro;
+		border: solid 1px $grisoscuro;
+		&:hover{
+			background-color: $grisoscuro;
+			color: $grisclaro;
+			border: solid 1px $grisclaro;
+		}
+	}	
+}
+.body{
+	grid-area: body;
+	.subTitulo{
+		margin: 20px;
+		border-bottom: 2px solid; 
+		color: rgb(51, 51, 51);
+		text-transform: uppercase;
+		letter-spacing: 4px
+	}
+	.imgOfertasIndexP{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+		.imgOfertasIndexH{
+			margin-bottom: 30px;
+			padding: 5px 5px 30px 5px;
+			border: 2px solid $grisoscuro;
+			color: $grisoscuro;
+			display: flex;
+			flex-direction: column;
+			font-style: italic;
+			text-transform: uppercase;
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+			-webkit-box-shadow: 0 0 15px 05px $colorsombras;
+			box-shadow: 0 0 15px 05px $colorsombras;
+			transition: 0.2s;
+			&:hover{
+				transform: scale(1.01);
+				-webkit-box-shadow: 0 0 15px 05px rgba(64,64,64,1);
+				box-shadow: 0 0 15px 05px rgba(64,64,64,1);
+			}
+			img{
+				-webkit-border-radius: 5px 5px 0 0;
+				border-radius: 5px 5px 0 0;
+			}
+			button{
+				text-transform: uppercase;
+				background-color: rgb(51, 51, 51);
+				border: rgb(51, 51, 51);
+				&:hover{
+					background-color: rgb(166, 166, 166);
+				}
+			}
+			.tituloRemera{
+				text-align: center;
+			}
+		}
+	}
+	h5{
+		font-family: 'IBM Plex Sans', sans-serif;
+		text-transform: uppercase;
+	}
+}		
+.wppLogo{
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 90;
+	transition: 0.2s;
+	&:hover{
+		transform: scale(1.10);
+	}
+}
+.footer{
+	grid-area: footer;
+	background-image: $gradiente; 
+	color: $grisclaro;
+	font-family: $font;
+	/*font-size: 16px;*/
+	bottom: 0;
+	display: grid;
+	grid-template-columns: 33,3% 33,3% 33,3%;
+	grid-template-areas: 
+	"direccion secciones redes"
+	;
+	li{
+		text-transform: uppercase;
+		list-style-type: none;
+		letter-spacing: 2px;
+		a{
+			text-decoration: none;
+			color: $grisclaro;
+			transition: 0.1s;
+			&:hover{
+				color: $grismedio;
+			}
+		}
+	}
+	.direccion{
+		grid-area: direccion;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		span{
+			margin: 2px 0;
+		}
+	}
+	.secciones{
+		grid-area: secciones;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.redes{
+		grid-area: redes;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-around;
+		li{
+			transition: 0.1s;
+			&:hover{
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+			
+		
+		
+		
