@@ -1,5 +1,6 @@
 body{
 	background-color: $grismedio;
+	box-sizing: border-box;
 }
 .grid{
 	display: grid;
@@ -8,8 +9,36 @@ body{
 	"body"
 	"footer"
 	;
-	grid-template-rows: 145px auto 300px;
+	grid-template-rows: auto auto 300px;
 	grid-template-columns: 100%
+}
+.headerMob{
+	display: none;
+	background-image: $gradiente;
+	font-family: $font;
+	.tituloMob{
+		text-transform: uppercase;
+		font-style: italic;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		a{
+			color: $grisclaro;
+			text-decoration: none;
+		}	
+	}
+	.botoneraMob{
+		text-transform: uppercase;
+		background-color: $grisoscuro;
+		letter-spacing: 4px;
+		margin-top: 0;
+		border: 0;
+		border-radius: 0 0 5px 0; 
+		a{
+			color: $grisclaro;
+			text-decoration: none;
+		}
+	}
 }
 .header{
 	background-image: $gradiente;
@@ -26,26 +55,24 @@ body{
 		justify-content: flex-start;
 		align-items: center;
 		.titulo{
-			color: $grisclaro;
-			/*font-size: 50px;*/
 			font-style: italic;
 			font-family: $font;
-			text-transform: uppercase; 
-			h1{
-				/*font-weight: $fontbold;*/
-				/*font-size: 90px;*/
-			}
+			text-transform: uppercase;
+			a{
+				text-decoration: none;
+				color: $grisclaro;
+			} 
 		}	
 		.botonera{
 			text-transform: uppercase;
 			list-style-type: none;
 			letter-spacing: 4px;
 			display: flex;
+			margin-bottom: 4px;
 			li{
-				/*font-weight: $fontregular;*/
 				display: flex;
 				justify-content: space-between;
-				padding: 0px 10px 7px 10px;
+				padding-right: 10px;
 				a{
 					color: $grisclaro;
 					text-decoration: none;
@@ -67,28 +94,40 @@ body{
 		font-family: $font;
 		text-transform: uppercase;
 		.botonIng{
-			margin-bottom: 10px;
+			margin-bottom: 5px;
 			background-color: $grisclaro;
 			color: $grisoscuro;
 			border: solid 1px $grisoscuro;
+			border-radius: 5px;
 			&:hover{
 				background-color: $grisoscuro;
 				color: $grisclaro;
 				border: solid 1px $grisclaro;
 			}
 		}	
-	}	
-	form button{
-		background-color: $grisclaro;
-		color: $grisoscuro;
-		border: solid 1px $grisoscuro;
-		&:hover{
-			background-color: $grisoscuro;
-			color: $grisclaro;
-			border: solid 1px $grisclaro;
+	}
+	form{
+		input{
+			height: 36px;
+			width: 12em;
+			margin-bottom: 5px;
+			border-radius: 5px;
+			border: none;
 		}
-	}	
-}
+		button{
+			background-color: $grisclaro;
+			color: $grisoscuro;
+			border: solid 1px $grisoscuro;
+			border-radius: 5px;
+			transform: translateY(-1px);
+			&:hover{
+				background-color: $grisoscuro;
+				color: $grisclaro;
+				border: solid 1px $grisclaro;
+			}	
+		}
+	}
+}	
 .body{
 	grid-area: body;
 	.subTitulo{
@@ -146,7 +185,7 @@ body{
 .wppLogo{
 	position: fixed;
 	bottom: 20px;
-	right: 30px;
+	right: 20px;
 	z-index: 90;
 	transition: 0.2s;
 	&:hover{
@@ -158,7 +197,6 @@ body{
 	background-image: $gradiente; 
 	color: $grisclaro;
 	font-family: $font;
-	/*font-size: 16px;*/
 	bottom: 0;
 	display: grid;
 	grid-template-columns: 33,3% 33,3% 33,3%;
@@ -209,7 +247,38 @@ body{
 		}
 	}
 }
-			
-		
-		
-		
+@media all and (max-width: 1100px){
+	.header{
+		form{
+			input{
+				width: 10em;
+			}
+		}
+	}
+}
+@media all and (max-width: 800px){
+	.header{
+		form{
+			input{
+				width: 7.5em;
+			}
+		}
+	}
+}
+@media all and (max-width: 576px){
+	.header{
+		display: none;
+	}
+	.headerMob{
+		display: flex;	
+	}
+	.footer{
+		justify-content: center;
+		.secciones{
+			transform: translateX(-60px);
+		}
+		.direccion{
+			display: none;
+		}
+	}
+}		

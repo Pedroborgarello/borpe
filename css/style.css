@@ -9,6 +9,10 @@ body {
   font-size: 16px;
 }
 
+.fontSize-40px {
+  font-size: 40px;
+}
+
 .fontSize-50px {
   font-size: 50px;
 }
@@ -27,13 +31,47 @@ body {
 
 body {
   background-color: #5a5a5a;
+  box-sizing: border-box;
 }
 
 .grid {
   display: grid;
   grid-template-areas: "header" "body" "footer";
-  grid-template-rows: 145px auto 300px;
+  grid-template-rows: auto auto 300px;
   grid-template-columns: 100%;
+}
+
+.headerMob {
+  display: none;
+  background-image: linear-gradient(to top, #1e1e1e, #202020, #222222, #242424, #262626, #282828, #292929, #2b2b2b, #2d2d2d, #2f2f2f, #313131, #333333);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.headerMob .tituloMob {
+  text-transform: uppercase;
+  font-style: italic;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.headerMob .tituloMob a {
+  color: #a6a6a6;
+  text-decoration: none;
+}
+
+.headerMob .botoneraMob {
+  text-transform: uppercase;
+  background-color: #333333;
+  letter-spacing: 4px;
+  margin-top: 0;
+  border: 0;
+  border-radius: 0 0 5px 0;
+}
+
+.headerMob .botoneraMob a {
+  color: #a6a6a6;
+  text-decoration: none;
 }
 
 .header {
@@ -56,16 +94,14 @@ body {
 }
 
 .header .tituloNav .titulo {
-  color: #a6a6a6;
-  /*font-size: 50px;*/
   font-style: italic;
   font-family: "IBM Plex Sans", sans-serif;
   text-transform: uppercase;
 }
 
-.header .tituloNav .titulo h1 {
-  /*font-weight: $fontbold;*/
-  /*font-size: 90px;*/
+.header .tituloNav .titulo a {
+  text-decoration: none;
+  color: #a6a6a6;
 }
 
 .header .tituloNav .botonera {
@@ -73,13 +109,13 @@ body {
   list-style-type: none;
   letter-spacing: 4px;
   display: flex;
+  margin-bottom: 4px;
 }
 
 .header .tituloNav .botonera li {
-  /*font-weight: $fontregular;*/
   display: flex;
   justify-content: space-between;
-  padding: 0px 10px 7px 10px;
+  padding-right: 10px;
 }
 
 .header .tituloNav .botonera li a {
@@ -105,10 +141,11 @@ body {
 }
 
 .header .ingresar .botonIng {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   background-color: #a6a6a6;
   color: #333333;
   border: solid 1px #333333;
+  border-radius: 5px;
 }
 
 .header .ingresar .botonIng:hover {
@@ -117,10 +154,20 @@ body {
   border: solid 1px #a6a6a6;
 }
 
+.header form input {
+  height: 36px;
+  width: 12em;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
 .header form button {
   background-color: #a6a6a6;
   color: #333333;
   border: solid 1px #333333;
+  border-radius: 5px;
+  transform: translateY(-1px);
 }
 
 .header form button:hover {
@@ -196,7 +243,7 @@ body {
 .wppLogo {
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 20px;
   z-index: 90;
   transition: 0.2s;
 }
@@ -210,7 +257,6 @@ body {
   background-image: linear-gradient(to top, #1e1e1e, #202020, #222222, #242424, #262626, #282828, #292929, #2b2b2b, #2d2d2d, #2f2f2f, #313131, #333333);
   color: #a6a6a6;
   font-family: "IBM Plex Sans", sans-serif;
-  /*font-size: 16px;*/
   bottom: 0;
   display: grid;
   grid-template-columns: 33,3% 33,3% 33,3%;
@@ -267,6 +313,36 @@ body {
 
 .footer .redes li:hover {
   transform: scale(1.05);
+}
+
+@media all and (max-width: 1100px) {
+  .header form input {
+    width: 10em;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .header form input {
+    width: 7.5em;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .header {
+    display: none;
+  }
+  .headerMob {
+    display: flex;
+  }
+  .footer {
+    justify-content: center;
+  }
+  .footer .secciones {
+    transform: translateX(-60px);
+  }
+  .footer .direccion {
+    display: none;
+  }
 }
 
 .bannerProductos {
