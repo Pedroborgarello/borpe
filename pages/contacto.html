@@ -22,31 +22,52 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="../images/iconborpe.png">
 </head>
 <body>
-	<div class="contacto">
-		<div class="contenedorContacto">
+	<div class="grid">
+		<div class="headerContacto">
 			<div class="logoContacto">
-				<a href="../index.html"><img width="90px" src="../images/logoborpe.svg" alt="logo"></a>
-			</div>	
-			<div class="contForm">
-				<form class="formulario" action="recibe.html" method="GET">
-					<p>nombre completo</p>
-					<input type="text=" name="nombre" placeholder="Ingrese su nombre">
-					<p>email</p>
-					<input type="email" name="email" placeholder="Ingrese su email">
-					<p>asunto</p>
-					<input type="text" name="asunto" placeholder="Asunto">
-					<p>comentario</p>
-					<textarea name="comentario" placeholder="Haz tu consulta"></textarea>
-					<div class="enviar">
-						<input type="submit" name="enviar" value="ENVIAR">
-					</div>
-				</form>
+				<a href="../index.html"><img width="40px" src="../images/logoborpe.svg" alt="logo"></a>
 			</div>
-		</div>		
-	</div>
-	<div class="wppLogo">
+			<h1><a href="../index.html">borpe</a></h1>
+		</div>
+		<div class="contacto container-fluid">
+			<div class="contenedorContacto row">	
+				<img src="../images/chicohoodieb.png" class="imgContacto col-7" alt="chico con hoodie">
+				<div class="contForm col-12 col-lg-5">
+					<form class="formulario" action="recibe.html" method="GET">
+						<input type="text=" name="nombre" placeholder="Nombre completo">
+						<input type="email" name="email" placeholder="Su dirección email">
+						<input type="text" name="asunto" placeholder="Asunto">
+						<textarea name="comentario" placeholder="Haz tu consulta"></textarea>
+						<div class="enviar">
+							<input type="submit" name="enviar" value="ENVIAR">
+						</div>
+					</form>
+				</div>
+			</div>		
+		</div>
+		<div class="wppLogo">
 			<a href="contacto.html"><img width="60px" src="../images/wpplogo.svg" alt="wpplogo"></a>
 		</div>
+		<footer class="footer fontSize-16">
+			<div class="direccion">
+				<span>Las Varillas, Córdoba</span>
+				<span>Calle General Paz 961</span>
+				<span>Av. Alvear 244</span>
+			</div>
+			<ul class="secciones">
+			    <li><a href="productos.html">productos</a></li>
+			    <li><a href="novedades.html">novedades</a></li>
+			    <li><a href="nosotros.html">nosotros</a></li>
+			    <li><a href="contacto.html">contacto</a></li>
+			</ul>
+			<ul class="redes">
+			    <li><a href="#"><img width="40px" src="../images/logofacebook.svg" alt="facebook"></a></li>
+			    <li><a href="#"><img width="40px" src="../images/logotwitter.svg" alt="twitter"></a></li>
+			    <li><a href="#"><img width="40px" src="../images/logoinstagram.svg" alt="instagram"></a></li>
+			</ul>
+		</footer>
+	</div>
+		
 	<script src="../js/jquery-3.5.1.slim.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
 </body>

@@ -6,9 +6,9 @@ body{
 	font-weight: $fontregular;
 }
 
-@each $size in $sizes{
+@each $size, $val in $sizes{
 	.fontSize-#{$size}{
-		font-size: $size;
+		font-size: $val;
 	}
 }
 

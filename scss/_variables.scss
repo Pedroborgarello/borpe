@@ -6,5 +6,5 @@ $colorsombras: rgba(74,74,74,1);
 $font: 'IBM Plex Sans', sans-serif;
 $fontregular: 400;
 $fontbold: 700;
-$sizes: 16px, 40px, 50px, 90px;
+$sizes: ("16": 1rem, "18": 1.12rem, "20": 1.25rem, "25": 1.56rem, "40": 2.5rem, "50": 3.12rem, "90": 5.62rem);
 $fontWeight: ("regular": 400, "bold": 700);

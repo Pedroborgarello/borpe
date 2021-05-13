@@ -5,20 +5,32 @@ body {
   font-weight: 400;
 }
 
-.fontSize-16px {
-  font-size: 16px;
+.fontSize-16 {
+  font-size: 1rem;
 }
 
-.fontSize-40px {
-  font-size: 40px;
+.fontSize-18 {
+  font-size: 1.12rem;
 }
 
-.fontSize-50px {
-  font-size: 50px;
+.fontSize-20 {
+  font-size: 1.25rem;
 }
 
-.fontSize-90px {
-  font-size: 90px;
+.fontSize-25 {
+  font-size: 1.56rem;
+}
+
+.fontSize-40 {
+  font-size: 2.5rem;
+}
+
+.fontSize-50 {
+  font-size: 3.12rem;
+}
+
+.fontSize-90 {
+  font-size: 5.62rem;
 }
 
 .font-regular {
@@ -37,12 +49,13 @@ body {
 .grid {
   display: grid;
   grid-template-areas: "header" "body" "footer";
-  grid-template-rows: auto auto 300px;
+  grid-template-rows: auto auto 18.75em;
   grid-template-columns: 100%;
 }
 
 .headerMob {
   display: none;
+  width: 100%;
   background-image: linear-gradient(to top, #1e1e1e, #202020, #222222, #242424, #262626, #282828, #292929, #2b2b2b, #2d2d2d, #2f2f2f, #313131, #333333);
   font-family: "IBM Plex Sans", sans-serif;
 }
@@ -50,9 +63,7 @@ body {
 .headerMob .tituloMob {
   text-transform: uppercase;
   font-style: italic;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  padding-right: 1rem;
 }
 
 .headerMob .tituloMob a {
@@ -63,7 +74,7 @@ body {
 .headerMob .botoneraMob {
   text-transform: uppercase;
   background-color: #333333;
-  letter-spacing: 4px;
+  letter-spacing: 0.25rem;
   margin-top: 0;
   border: 0;
   border-radius: 0 0 5px 0;
@@ -75,6 +86,7 @@ body {
 }
 
 .header {
+  grid-area: header;
   background-image: linear-gradient(to top, #1e1e1e, #202020, #222222, #242424, #262626, #282828, #292929, #2b2b2b, #2d2d2d, #2f2f2f, #313131, #333333);
   position: sticky;
   top: 0;
@@ -104,32 +116,37 @@ body {
   color: #a6a6a6;
 }
 
-.header .tituloNav .botonera {
+.header .tituloNav .navBotonera {
+  width: 80%;
+}
+
+.header .tituloNav .navBotonera .botonera {
   text-transform: uppercase;
   list-style-type: none;
-  letter-spacing: 4px;
+  letter-spacing: 0.25rem;
   display: flex;
-  margin-bottom: 4px;
+  margin-bottom: 0.22em;
+  justify-content: space-evenly;
 }
 
-.header .tituloNav .botonera li {
+.header .tituloNav .navBotonera .botonera li {
   display: flex;
   justify-content: space-between;
-  padding-right: 10px;
+  padding-right: 0.62rem;
 }
 
-.header .tituloNav .botonera li a {
+.header .tituloNav .navBotonera .botonera li a {
   color: #a6a6a6;
   text-decoration: none;
   transition: 0.1s;
 }
 
-.header .tituloNav .botonera li a:hover {
+.header .tituloNav .navBotonera .botonera li a:hover {
   color: #5a5a5a;
   transform: scale(1.05);
 }
 
-.header .tituloNav .botonera li .subBotonera {
+.header .tituloNav .navBotonera .botonera li .subBotonera {
   background-color: #333333;
 }
 
@@ -141,7 +158,7 @@ body {
 }
 
 .header .ingresar .botonIng {
-  margin-bottom: 5px;
+  margin-bottom: 0.31em;
   background-color: #a6a6a6;
   color: #333333;
   border: solid 1px #333333;
@@ -154,15 +171,28 @@ body {
   border: solid 1px #a6a6a6;
 }
 
-.header form input {
-  height: 36px;
-  width: 12em;
-  margin-bottom: 5px;
+.header .ingresar .modal .botonModal {
+  background-color: #a6a6a6;
+  color: #333333;
+  border: solid 1px #333333;
+  border-radius: 5px;
+}
+
+.header .ingresar .modal .botonModal:hover {
+  background-color: #333333;
+  color: #a6a6a6;
+  border: solid 1px #a6a6a6;
+}
+
+.header .formBuscar input {
+  height: 2.2em;
+  width: 12rem;
+  margin-bottom: 0.31em;
   border-radius: 5px;
   border: none;
 }
 
-.header form button {
+.header .formBuscar button {
   background-color: #a6a6a6;
   color: #333333;
   border: solid 1px #333333;
@@ -170,7 +200,7 @@ body {
   transform: translateY(-1px);
 }
 
-.header form button:hover {
+.header .formBuscar button:hover {
   background-color: #333333;
   color: #a6a6a6;
   border: solid 1px #a6a6a6;
@@ -181,11 +211,11 @@ body {
 }
 
 .body .subTitulo {
-  margin: 20px;
+  margin: 1.2rem;
   border-bottom: 2px solid;
   color: #333333;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 0.25rem;
 }
 
 .body .imgOfertasIndexP {
@@ -195,8 +225,8 @@ body {
 }
 
 .body .imgOfertasIndexP .imgOfertasIndexH {
-  margin-bottom: 30px;
-  padding: 5px 5px 30px 5px;
+  margin-bottom: 1.8em;
+  padding: 0.31em 0.31rem 1.87em 0.31rem;
   border: 2px solid #333333;
   color: #333333;
   display: flex;
@@ -205,30 +235,32 @@ body {
   text-transform: uppercase;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 15px 5px #4a4a4a;
-  box-shadow: 0 0 15px 5px #4a4a4a;
+  -webkit-box-shadow: 0 0 0.93em 0.31rem #4a4a4a;
+  box-shadow: 0 0 0.93em 0.31rem #4a4a4a;
   transition: 0.2s;
 }
 
 .body .imgOfertasIndexP .imgOfertasIndexH:hover {
   transform: scale(1.01);
-  -webkit-box-shadow: 0 0 15px 5px #404040;
-  box-shadow: 0 0 15px 5px #404040;
+  -webkit-box-shadow: 0 0 0.93em 0.31rem #404040;
+  box-shadow: 0 0 0.93em 0.31rem #404040;
 }
 
 .body .imgOfertasIndexP .imgOfertasIndexH img {
-  -webkit-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 0.31em 0.31rem 0 0;
+  border-radius: 0.31em 0.31rem 0 0;
 }
 
 .body .imgOfertasIndexP .imgOfertasIndexH button {
   text-transform: uppercase;
   background-color: #333333;
   border: #333333;
+  color: #a6a6a6;
 }
 
 .body .imgOfertasIndexP .imgOfertasIndexH button:hover {
   background-color: #a6a6a6;
+  color: #333333;
 }
 
 .body .imgOfertasIndexP .imgOfertasIndexH .tituloRemera {
@@ -236,14 +268,14 @@ body {
 }
 
 .body h5 {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   text-transform: uppercase;
 }
 
 .wppLogo {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1.2em;
+  right: 1.2rem;
   z-index: 90;
   transition: 0.2s;
 }
@@ -259,7 +291,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   bottom: 0;
   display: grid;
-  grid-template-columns: 33,3% 33,3% 33,3%;
+  grid-template-columns: 33.3% 33.3% 33.3%;
   grid-template-areas: "direccion secciones redes";
 }
 
@@ -316,14 +348,14 @@ body {
 }
 
 @media all and (max-width: 1100px) {
-  .header form input {
+  .header .formBuscar input {
     width: 10em;
   }
 }
 
 @media all and (max-width: 800px) {
-  .header form input {
-    width: 7.5em;
+  .header .formBuscar input {
+    width: 7em;
   }
 }
 
@@ -333,12 +365,14 @@ body {
   }
   .headerMob {
     display: flex;
+    justify-content: space-between;
   }
   .footer {
-    justify-content: center;
+    display: flex;
+    justify-content: space-evenly;
   }
   .footer .secciones {
-    transform: translateX(-60px);
+    padding-left: 0;
   }
   .footer .direccion {
     display: none;
@@ -348,112 +382,233 @@ body {
 .bannerProductos {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
 }
 
 .bannerProductos img {
-  -webkit-border-radius: 10px;
-  border-radius: 5px;
+  border-bottom-right-radius: 0.31em;
+  border-bottom-left-radius: 0.31em;
+}
+
+@media all and (max-width: 1100px) {
+  .bannerProductos img {
+    width: 100vw;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .bannerProductos img {
+    width: 100vw;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .bannerProductos img {
+    width: 100vw;
+  }
 }
 
 .buzosNovedades {
   width: 100%;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .buzosNovedades .buzoBlanco {
+  color: #a6a6a6;
   background-image: linear-gradient(to left, #1f1f1f, #242424, #292929, #2e2e2e, #333333);
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding: 0.9em 0 0.9em 0;
 }
 
 .buzosNovedades .buzoBlanco img {
   padding: 2px;
-  margin: 10px;
+  margin-bottom: 0.62em;
   border: 2px solid #a6a6a6;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 0 10px 5px #171717;
-  box-shadow: 0 0 10px 5px #171717;
-  transition: 0.2s;
+  -webkit-border-radius: 0.62rem;
+  border-radius: 0.62rem;
+  -webkit-box-shadow: 0 0 0.62rem 0.31rem #171717;
+  box-shadow: 0 0 0.62rem 0.31rem #171717;
+  transition: 0.5s;
 }
 
 .buzosNovedades .buzoBlanco img:hover {
   transform: scale(1.01);
 }
 
+.buzosNovedades .buzoBlanco button {
+  width: 50%;
+  text-transform: uppercase;
+  background-color: #a6a6a6;
+  border: #a6a6a6;
+  color: #333333;
+}
+
+.buzosNovedades .buzoBlanco button:hover {
+  background-color: #333333;
+  color: #a6a6a6;
+}
+
 .buzosNovedades .buzoNegro {
   background-image: linear-gradient(to right, #807f7f, #898989, #939293, #9c9c9c, #a6a6a6);
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding: 0.9em 0 0.9em 0;
 }
 
 .buzosNovedades .buzoNegro img {
   padding: 2px;
-  margin: 10px;
+  margin-bottom: 0.62em;
   border: 2px solid #333333;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 0 10px 5px #4a4a4a;
-  box-shadow: 0 0 10px 5px #4a4a4a;
-  transition: 0.2s;
+  -webkit-border-radius: 0.62rem;
+  border-radius: 0.62rem;
+  -webkit-box-shadow: 0 0 0.62rem 0.31rem #4a4a4a;
+  box-shadow: 0 0 0.62rem 0.31rem #4a4a4a;
+  transition: 0.5s;
 }
 
 .buzosNovedades .buzoNegro img:hover {
   transform: scale(1.01);
 }
 
-.contacto {
+.buzosNovedades .buzoNegro button {
+  width: 50%;
+  text-transform: uppercase;
+  background-color: #333333;
+  border: #333333;
+  color: #a6a6a6;
+}
+
+.buzosNovedades .buzoNegro button:hover {
+  background-color: #a6a6a6;
+  color: #333333;
+}
+
+@media all and (max-width: 800px) {
+  .buzosNovedades {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .buzosNovedades .buzoBlanco {
+    width: 100%;
+  }
+  .buzosNovedades .buzoNegro {
+    width: 100%;
+  }
+}
+
+.headerContacto {
+  grid-area: header;
   width: 100%;
-  height: 100vh;
+  background-image: linear-gradient(to top, #1e1e1e, #202020, #222222, #242424, #262626, #282828, #292929, #2b2b2b, #2d2d2d, #2f2f2f, #313131, #333333);
+  font-style: italic;
+  font-family: "IBM Plex Sans", sans-serif;
+  text-transform: uppercase;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.headerContacto .logoContacto {
+  margin: 0.5em 0 0 1rem;
+}
+
+.headerContacto h1 {
+  margin: 0.1em 1.25rem 0.1em 0;
+}
+
+.headerContacto h1 a {
+  text-decoration: none;
+  color: #a6a6a6;
+}
+
+.contacto {
+  grid-area: body;
+  width: 100%;
+}
+
+.contacto .contenedorContacto {
+  margin: 1.5em 0 1.5em 0;
+  background-color: #a6a6a6;
+  border-radius: 5px;
+}
+
+.contacto .contenedorContacto .imgContacto {
+  padding: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.contacto .contenedorContacto .contForm {
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contacto .contenedorContacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contacto .contForm {
-  width: 20em;
-  height: 30em;
-  display: flex;
-  margin-top: 10px;
-}
-
-.contacto .contForm .formulario {
-  width: 100%;
+.contacto .contenedorContacto .contForm .formulario {
+  width: 80%;
   text-transform: uppercase;
   font-family: "IBM Plex Sans", sans-serif;
-  letter-spacing: 4px;
-  color: #a6a6a6;
-  border: 2px solid #a6a6a6;
-  padding: 5px;
+  letter-spacing: 0.25rem;
+  color: #333333;
 }
 
-.contacto .contForm .formulario textarea {
+.contacto .contenedorContacto .contForm .formulario textarea {
   width: 100%;
-  height: 100px;
+  height: 6.25em;
   resize: none;
+  border-radius: 7px;
+  border: none;
+  margin-top: 1em;
 }
 
-.contacto .contForm .formulario p {
-  font-size: 1.4rem;
-  height: 48px;
-  padding-top: 10px;
-  margin-bottom: 2px;
-}
-
-.contacto .contForm .formulario input {
+.contacto .contenedorContacto .contForm .formulario input {
   width: 100%;
-  height: 40px;
+  height: 2.5em;
+  border-radius: 7px;
+  border: none;
+  margin: 1em 0 1em 0;
+}
+
+.contacto .contenedorContacto .contForm .formulario .enviar {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.contacto .contenedorContacto .contForm .formulario .enviar input {
+  width: 40%;
+  transition: 0.4s;
+}
+
+.contacto .contenedorContacto .contForm .formulario .enviar input:hover {
+  background-color: #333333;
+  color: #a6a6a6;
+}
+
+@media all and (max-width: 800px) {
+  .contenedorContacto {
+    display: flex;
+    justify-content: center;
+  }
+  .contenedorContacto .imgContacto {
+    display: none;
+  }
+  .contenedorContacto .contForm {
+    width: 100%;
+  }
+  .contenedorContacto .contForm .formulario {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .contenedorContacto .imgContacto {
+    display: none;
+  }
 }
 
 .nosotros {
@@ -491,4 +646,13 @@ body {
 
 .nosotros2 .noText h3 {
   text-transform: uppercase;
+}
+
+@media all and (max-width: 576px) {
+  .nosotros2 img {
+    order: 1;
+  }
+  .nosotros2 div {
+    order: 2;
+  }
 }

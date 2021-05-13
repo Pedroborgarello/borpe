@@ -9,19 +9,18 @@ body{
 	"body"
 	"footer"
 	;
-	grid-template-rows: auto auto 300px;
+	grid-template-rows: auto auto 18.75em;
 	grid-template-columns: 100%
 }
 .headerMob{
 	display: none;
+	width: 100%;
 	background-image: $gradiente;
 	font-family: $font;
 	.tituloMob{
 		text-transform: uppercase;
 		font-style: italic;
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
+		padding-right: 1rem;
 		a{
 			color: $grisclaro;
 			text-decoration: none;
@@ -30,7 +29,7 @@ body{
 	.botoneraMob{
 		text-transform: uppercase;
 		background-color: $grisoscuro;
-		letter-spacing: 4px;
+		letter-spacing: 0.25rem;
 		margin-top: 0;
 		border: 0;
 		border-radius: 0 0 5px 0; 
@@ -38,9 +37,10 @@ body{
 			color: $grisclaro;
 			text-decoration: none;
 		}
-	}
+	}		
 }
 .header{
+	grid-area: header;
 	background-image: $gradiente;
 	position: sticky;
 	top: 0;
@@ -63,30 +63,34 @@ body{
 				color: $grisclaro;
 			} 
 		}	
-		.botonera{
-			text-transform: uppercase;
-			list-style-type: none;
-			letter-spacing: 4px;
-			display: flex;
-			margin-bottom: 4px;
-			li{
+		.navBotonera{
+			width: 80%;
+			.botonera{
+				text-transform: uppercase;
+				list-style-type: none;
+				letter-spacing: 0.25rem;
 				display: flex;
-				justify-content: space-between;
-				padding-right: 10px;
-				a{
-					color: $grisclaro;
-					text-decoration: none;
-					transition: 0.1s;
-					&:hover{
-						color: $grismedio;
-						transform: scale(1.05);
+				margin-bottom: 0.22em;
+				justify-content: space-evenly;
+				li{
+					display: flex;
+					justify-content: space-between;
+					padding-right: 0.62rem;
+					a{
+						color: $grisclaro;
+						text-decoration: none;
+						transition: 0.1s;
+						&:hover{
+							color: $grismedio;
+							transform: scale(1.05);
+						}
+					}
+					.subBotonera{
+						background-color: $grisoscuro;
 					}
 				}
-				.subBotonera{
-					background-color: $grisoscuro;
-				}
 			}
-		}
+		}	
 	}
 	.ingresar{
 		display: flex;
@@ -94,7 +98,7 @@ body{
 		font-family: $font;
 		text-transform: uppercase;
 		.botonIng{
-			margin-bottom: 5px;
+			margin-bottom: 0.31em;
 			background-color: $grisclaro;
 			color: $grisoscuro;
 			border: solid 1px $grisoscuro;
@@ -104,13 +108,26 @@ body{
 				color: $grisclaro;
 				border: solid 1px $grisclaro;
 			}
+		}
+		.modal{
+			.botonModal{
+				background-color: $grisclaro;
+				color: $grisoscuro;
+				border: solid 1px $grisoscuro;
+				border-radius: 5px;
+				&:hover{
+					background-color: $grisoscuro;
+					color: $grisclaro;
+					border: solid 1px $grisclaro;
+				}
+			}
 		}	
 	}
-	form{
+	.formBuscar{
 		input{
-			height: 36px;
-			width: 12em;
-			margin-bottom: 5px;
+			height: 2.2em;
+			width: 12rem;
+			margin-bottom: 0.31em;
 			border-radius: 5px;
 			border: none;
 		}
@@ -131,19 +148,19 @@ body{
 .body{
 	grid-area: body;
 	.subTitulo{
-		margin: 20px;
+		margin: 1.2rem;
 		border-bottom: 2px solid; 
-		color: rgb(51, 51, 51);
+		color: $grisoscuro;
 		text-transform: uppercase;
-		letter-spacing: 4px
+		letter-spacing: 0.25rem;
 	}
 	.imgOfertasIndexP{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 		.imgOfertasIndexH{
-			margin-bottom: 30px;
-			padding: 5px 5px 30px 5px;
+			margin-bottom: 1.8em;
+			padding: 0.31em 0.31rem 1.87em 0.31rem;
 			border: 2px solid $grisoscuro;
 			color: $grisoscuro;
 			display: flex;
@@ -152,24 +169,26 @@ body{
 			text-transform: uppercase;
 			-webkit-border-radius: 10px;
 			border-radius: 10px;
-			-webkit-box-shadow: 0 0 15px 05px $colorsombras;
-			box-shadow: 0 0 15px 05px $colorsombras;
+			-webkit-box-shadow: 0 0 0.93em 0.31rem $colorsombras;
+			box-shadow: 0 0 0.93em 0.31rem $colorsombras;
 			transition: 0.2s;
 			&:hover{
 				transform: scale(1.01);
-				-webkit-box-shadow: 0 0 15px 05px rgba(64,64,64,1);
-				box-shadow: 0 0 15px 05px rgba(64,64,64,1);
+				-webkit-box-shadow: 0 0 0.93em 0.31rem rgba(64,64,64,1);
+				box-shadow: 0 0 0.93em 0.31rem rgba(64,64,64,1);
 			}
 			img{
-				-webkit-border-radius: 5px 5px 0 0;
-				border-radius: 5px 5px 0 0;
+				-webkit-border-radius: 0.31em 0.31rem 0 0;
+				border-radius: 0.31em 0.31rem 0 0;
 			}
 			button{
 				text-transform: uppercase;
-				background-color: rgb(51, 51, 51);
-				border: rgb(51, 51, 51);
+				background-color: $grisoscuro;
+				border: $grisoscuro;
+				color: $grisclaro;
 				&:hover{
-					background-color: rgb(166, 166, 166);
+					background-color: $grisclaro;
+					color: $grisoscuro;
 				}
 			}
 			.tituloRemera{
@@ -178,14 +197,14 @@ body{
 		}
 	}
 	h5{
-		font-family: 'IBM Plex Sans', sans-serif;
+		font-family: $font;
 		text-transform: uppercase;
 	}
 }		
 .wppLogo{
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
+	bottom: 1.2em;
+	right: 1.2rem;
 	z-index: 90;
 	transition: 0.2s;
 	&:hover{
@@ -199,7 +218,7 @@ body{
 	font-family: $font;
 	bottom: 0;
 	display: grid;
-	grid-template-columns: 33,3% 33,3% 33,3%;
+	grid-template-columns: 33.3% 33.3% 33.3%;
 	grid-template-areas: 
 	"direccion secciones redes"
 	;
@@ -249,7 +268,7 @@ body{
 }
 @media all and (max-width: 1100px){
 	.header{
-		form{
+		.formBuscar{
 			input{
 				width: 10em;
 			}
@@ -258,9 +277,9 @@ body{
 }
 @media all and (max-width: 800px){
 	.header{
-		form{
+		.formBuscar{
 			input{
-				width: 7.5em;
+				width: 7em;
 			}
 		}
 	}
@@ -270,12 +289,14 @@ body{
 		display: none;
 	}
 	.headerMob{
-		display: flex;	
+		display: flex;
+		justify-content: space-between;
 	}
 	.footer{
-		justify-content: center;
+		display: flex;
+		justify-content: space-evenly;
 		.secciones{
-			transform: translateX(-60px);
+			padding-left: 0;
 		}
 		.direccion{
 			display: none;

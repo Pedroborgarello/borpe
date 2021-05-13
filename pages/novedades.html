@@ -23,21 +23,21 @@
 </head>
 <body>
 	<div class="grid">
-		<nav class="headerMob">
-		    <div class="dropdown navbar navbar-dark">
-  				<button class="navbar-toggler" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    				<span class="navbar-toggler-icon"></span>
- 				</button>
-  				<div class="botoneraMob dropdown-menu" aria-labelledby="dropdownMenuButton">
-    				<a class="dropdown-item" href="productos.html">productos</a>
-    				<a class="dropdown-item" href="novedades.html">novedades</a>
-    				<a class="dropdown-item" href="nosotros.html">nosotros</a>
-    				<a class="dropdown-item" href="contacto.html">contacto</a>
-  				</div>
+		<nav class="headerMob">    
+			<div class="navMob dropdown navbar navbar-dark">
+	  			<button class="navbar-toggler" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    			<span class="navbar-toggler-icon"></span>
+	 			</button>
+	  			<div class="botoneraMob dropdown-menu" aria-labelledby="dropdownMenuButton">
+	    			<a class="dropdown-item" href="productos.html">productos</a>
+	    			<a class="dropdown-item" href="novedades.html">novedades</a>
+	    			<a class="dropdown-item" href="nosotros.html">nosotros</a>
+	    			<a class="dropdown-item" href="contacto.html">contacto</a>
+	  			</div>
 			</div>
-			<div class="tituloMob fontSize-40px font-bold">
+			<div class="tituloMob fontSize-40 font-bold">
 				<a href="../index.html">borpe</a>
-			</div>
+			</div>	
 		</nav>
 		<header class="header container-fluid">	
 			<div class="row">
@@ -45,21 +45,21 @@
 					<a href="../index.html"><img width="80px" src="../images/logoborpe.svg" alt="logo"></a>
 				</div>
 				<div class="tituloNav col-9">	
-					<div class="titulo fontSize-50px">
-						<a href="../index.html"><h1 class="fontSize-90px font-bold">borpe</h1></a>
+					<div class="titulo">
+						<a href="../index.html"><h1 class="fontSize-90 font-bold">borpe</h1></a>
 					</div>
-					<nav>
-						<ul class="botonera">
-							<li class="dropdown font-regular">
+					<nav class="navBotonera">
+						<ul class="botonera font-regular fontSize-18">
+							<li class="dropdown">
 								<a class=" dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							    productos
 							  	</a>
 							  	<div class="subBotonera dropdown-menu" aria-labelledby="dropdownMenuLink">
 							    	<a class="dropdown-item" href="productos.html">todos</a>
-							    	<a class="dropdown-item" href="productos.html">remeras</a>
-							    	<a class="dropdown-item" href="productos.html">buzos</a>
-							 		<a class="dropdown-item" href="productos.html">gorros</a>
-							 		<a class="dropdown-item" href="productos.html">gorras</a>
+							    	<a class="dropdown-item" href="productos.html #remeras">remeras</a>
+							    	<a class="dropdown-item" href="productos.html #buzos">buzos</a>
+							 		<a class="dropdown-item" href="productos.html #gorros">gorros</a>
+							 		<a class="dropdown-item" href="productos.html #gorras">gorras</a>
 							 	</div>	
 							</li>
 							<li><a href="novedades.html">novedades</a></li>
@@ -97,7 +97,7 @@
 											    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 											    <label class="form-check-label" for="exampleCheck1">Recordarme</label>
 											</div>
-											  <button type="submit" class="btn btn-primary">Ingresar</button>
+											  <button type="submit" class="botonModal btn btn-primary">Ingresar</button>
 										</form>
 								    </div>
 								    <div class="modal-footer"> 
@@ -105,7 +105,7 @@
 							    </div>
 							</div>
 						</div>
-						<form class="form-inline d-none d-md-block">
+						<form class="formBuscar form-inline d-none d-md-block">
 		      				<input class="" type="search" placeholder="Buscar" aria-label="Search">
 		     		 		<button class="btn my-2 my-sm-0" type="submit">Buscar</button>
 		    			</form>
@@ -114,57 +114,71 @@
 			</div>
 		</header>
 		<div class="body">
-			<h3 class="subTitulo">ofertas</h3>
-			<div class="imgOfertasIndexP">
-				<div class="imgOfertasIndexH">
-						<a href="#"><img width="320px" height="350px" src="../images/blanca1.jpg" alt="remerablanca"></a>
-						<h5 class="tituloRemera">remera borpe. <span class="badge badge-secondary">New</span></h5>
-						<p class="tituloRemera">$800</p>
+			<article>
+				<header>
+					<h3 class="subTitulo">ofertas</h3>
+				</header>
+				<div class="imgOfertasIndexP">
+					<div class="imgOfertasIndexH">
+						<a href="productos.html #remeras"><img width="320px" height="350px" src="../images/blanca1.jpg" alt="remera blanca"></a>
+						<h5 class="tituloRemera">remera borpe</h5>
+						<p class="tituloRemera fontSize-20">$800</p>
 						<button type="button" class="align-self-center btn btn-primary" data-toggle="button" aria-pressed="false">
   							comprar
 						</button>
 					</div>
 					<div class="imgOfertasIndexH">
-						<a href="#"><img width="320px" height="350px" src="../images/blanca2.jpg" alt="remerablanca2"></a>
-						<h5 class="tituloRemera">remera borpe. <span class="badge badge-secondary">New</span></h5>
-						<p class="tituloRemera">$800</p>
+						<a href="productos.html #remeras"><img width="320px" height="350px" src="../images/blanca2.jpg" alt="remera blanca 2"></a>
+						<h5 class="tituloRemera">remera borpe</h5>
+						<p class="tituloRemera fontSize-20">$800</p>
 						<button type="button" class="align-self-center btn btn-primary" data-toggle="button" aria-pressed="false">
   							comprar
 						</button>
 					</div>	
 					<div class="imgOfertasIndexH">
-						<a href="#"><img width="320px" height="350px" src="../images/negra1.jpg" alt="remeranegra"></a>
-						<h5 class="tituloRemera">remera borpe. <span class="badge badge-secondary">New</span></h5>
-						<p class="tituloRemera">$800</p>
+						<a href="productos.html #remeras"><img width="320px" height="350px" src="../images/negra1.jpg" alt="remera negra"></a>
+						<h5 class="tituloRemera">remera borpe</h5>
+						<p class="tituloRemera fontSize-20">$800</p>
 						<button type="button" class="align-self-center btn btn-primary" data-toggle="button" aria-pressed="false">
   							comprar
 						</button>
 					</div>
 					<div class="imgOfertasIndexH">
-						<a href="#"><img width="320px" height="350px" src="../images/negra2.jpg" alt="remeranegra2"></a>
-						<h5 class="tituloRemera">remera borpe. <span class="badge badge-secondary">New</span></h5>
-						<p class="tituloRemera">$800</p>
+						<a href="productos.html #remeras"><img width="320px" height="350px" src="../images/negra2.jpg" alt="remera negra 2"></a>
+						<h5 class="tituloRemera">remera borpe</h5>
+						<p class="tituloRemera fontSize-20">$800</p>
 						<button type="button" class="align-self-center btn btn-primary" data-toggle="button" aria-pressed="false">
   							comprar
 						</button>
 					</div>	
-			</div>
+				</div>
+			</article>
 			<div>
 				<h3 class="subTitulo">lo nuevo</h3>
 			</div>
 			<div class="buzosNovedades">
 				<div class="buzoBlanco">	
-					<img width="500px" src="../images/hblanco1.jpg" alt="buzoblanco">
+					<img class="align-self-center d-block" src="../images/hblanco1.jpg" srcset="../images/hblanco1mob.jpg 576w, ../images/hblanco1.jpg" alt="buzohblanco">
+					<h5 class="tituloBuzoNov fontSize-25 align-self-center">nuevo hoodie borpe</h5>
+					<p class="tituloBuzoNov fontSize-25 align-self-center">$2500</p>
+					<button type="button" class="align-self-center fontSize-20 btn btn-primary" data-toggle="button" aria-pressed="false">
+  						comprar
+					</button>
 				</div>	
 				<div class="buzoNegro">
-					<img width="500px" src="../images/hnegro1.jpg" alt="buzonegro">
+					<img class="align-self-center d-block" src="../images/hnegro1.jpg" srcset="../images/hnegro1mob.jpg 576w, ../images/hnegro1.jpg" alt="buzohnegro">
+					<h5 class="tituloBuzoNov fontSize-25 align-self-center">nuevo hoodie borpe</h5>
+					<p class="tituloBuzoNov fontSize-25 align-self-center">$2500</p>
+					<button type="button" class="align-self-center fontSize-20 btn btn-primary" data-toggle="button" aria-pressed="false">
+  						comprar
+					</button>
 				</div>
 			</div>
 		</div>		
 		<div class="wppLogo">
 			<a href="contacto.html"><img width="60px" src="../images/wpplogo.svg" alt="wpplogo"></a>
 		</div>
-		<footer class="footer fontSize-16px">
+		<footer class="footer fontSize-16">
 			<div class="direccion">
 				<span>Las Varillas, Córdoba</span>
 				<span>Calle General Paz 961</span>

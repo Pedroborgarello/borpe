@@ -1,9 +1,29 @@
 .bannerProductos{
 	display: flex;
 	justify-content: center;
-	margin-top: 30px;
 	img{
-		-webkit-border-radius: 10px;
-		border-radius: 5px;
+		border-bottom-right-radius: 0.31em;
+		border-bottom-left-radius: 0.31em;
+	}
+}
+@media all and (max-width: 1100px){
+	.bannerProductos{
+		img{
+			width: 100vw;	
+		}
+	}
+}
+@media all and (max-width: 800px){
+	.bannerProductos{
+		img{
+			width: 100vw;
+		}
+	}
+}
+@media all and (max-width: 576px){
+	.bannerProductos{
+		img{
+			width: 100vw;
+		}
 	}
 }

@@ -23,21 +23,21 @@
 </head>
 <body>
 	<div class="grid">
-		<nav class="headerMob">
-		    <div class="dropdown navbar navbar-dark">
-  				<button class="navbar-toggler" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    				<span class="navbar-toggler-icon"></span>
- 				</button>
-  				<div class="botoneraMob dropdown-menu" aria-labelledby="dropdownMenuButton">
-    				<a class="dropdown-item" href="productos.html">productos</a>
-    				<a class="dropdown-item" href="novedades.html">novedades</a>
-    				<a class="dropdown-item" href="nosotros.html">nosotros</a>
-    				<a class="dropdown-item" href="contacto.html">contacto</a>
-  				</div>
+		<nav class="headerMob">    
+			<div class="navMob dropdown navbar navbar-dark">
+	  			<button class="navbar-toggler" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    			<span class="navbar-toggler-icon"></span>
+	 			</button>
+	  			<div class="botoneraMob dropdown-menu" aria-labelledby="dropdownMenuButton">
+	    			<a class="dropdown-item" href="productos.html">productos</a>
+	    			<a class="dropdown-item" href="novedades.html">novedades</a>
+	    			<a class="dropdown-item" href="nosotros.html">nosotros</a>
+	    			<a class="dropdown-item" href="contacto.html">contacto</a>
+	  			</div>
 			</div>
-			<div class="tituloMob fontSize-40px font-bold">
+			<div class="tituloMob fontSize-40 font-bold">
 				<a href="../index.html">borpe</a>
-			</div>
+			</div>	
 		</nav>
 		<header class="header container-fluid">	
 			<div class="row">
@@ -45,21 +45,21 @@
 					<a href="../index.html"><img width="80px" src="../images/logoborpe.svg" alt="logo"></a>
 				</div>
 				<div class="tituloNav col-9">	
-					<div class="titulo fontSize-50px">
-						<a href="../index.html"><h1 class="fontSize-90px font-bold">borpe</h1></a>
+					<div class="titulo">
+						<a href="../index.html"><h1 class="fontSize-90 font-bold">borpe</h1></a>
 					</div>
-					<nav>
-						<ul class="botonera">
-							<li class="dropdown font-regular">
+					<nav class="navBotonera">
+						<ul class="botonera font-regular fontSize-18">
+							<li class="dropdown">
 								<a class=" dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							    productos
 							  	</a>
 							  	<div class="subBotonera dropdown-menu" aria-labelledby="dropdownMenuLink">
 							    	<a class="dropdown-item" href="productos.html">todos</a>
-							    	<a class="dropdown-item" href="productos.html">remeras</a>
-							    	<a class="dropdown-item" href="productos.html">buzos</a>
-							 		<a class="dropdown-item" href="productos.html">gorros</a>
-							 		<a class="dropdown-item" href="productos.html">gorras</a>
+							    	<a class="dropdown-item" href="productos.html #remeras">remeras</a>
+							    	<a class="dropdown-item" href="productos.html #buzos">buzos</a>
+							 		<a class="dropdown-item" href="productos.html #gorros">gorros</a>
+							 		<a class="dropdown-item" href="productos.html #gorras">gorras</a>
 							 	</div>	
 							</li>
 							<li><a href="novedades.html">novedades</a></li>
@@ -97,7 +97,7 @@
 											    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 											    <label class="form-check-label" for="exampleCheck1">Recordarme</label>
 											</div>
-											  <button type="submit" class="btn btn-primary">Ingresar</button>
+											  <button type="submit" class="botonModal btn btn-primary">Ingresar</button>
 										</form>
 								    </div>
 								    <div class="modal-footer"> 
@@ -105,7 +105,7 @@
 							    </div>
 							</div>
 						</div>
-						<form class="form-inline d-none d-md-block">
+						<form class="formBuscar form-inline d-none d-md-block">
 		      				<input class="" type="search" placeholder="Buscar" aria-label="Search">
 		     		 		<button class="btn my-2 my-sm-0" type="submit">Buscar</button>
 		    			</form>
@@ -116,22 +116,22 @@
 		<div class="body">
 			<section class="noSection container-fluid">
 				<div class="nosotros row">
-					<img class="noImg col-6" src="../images/ebuzonegro.jpg" alt="ebuzo">
-					<div class="noText col-6">
+					<img class="noImg col-12 col-sm-6" src="../images/ebuzonegro.jpg" alt="ebuzo">
+					<div class="noText col-12 col-sm-6">
 						<h3>Quiénes somos</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 				</div>
 				<div class="nosotros2 row">
-					<div class="noText col-6">
+					<div class="noText col-12 col-sm-6">
 						<h3>Nuestros productos</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
-					<img class="noImg col-6" src="../images/eremera.jpg" alt="eremera">
+					<img class="noImg col-12 col-sm-6" src="../images/eremera.jpg" alt="eremera">
 				</div>
 				<div class="nosotros row">
-					<img class="noImg col-6" src="../images/egorra.jpg" alt="egorra">
-					<div class="noText col-6">
+					<img class="noImg col-12 col-sm-6" src="../images/egorra.jpg" alt="egorra">
+					<div class="noText col-12 col-sm-6">
 						<h3>Misión, Visión y Valores</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
@@ -141,7 +141,7 @@
 		<div class="wppLogo">
 			<a href="contacto.html"><img width="60px" src="../images/wpplogo.svg" alt="wpplogo"></a>
 		</div>
-		<footer class="footer fontSize-16px">
+		<footer class="footer fontSize-16">
 			<div class="direccion">
 				<span>Las Varillas, Córdoba</span>
 				<span>Calle General Paz 961</span>

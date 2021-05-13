@@ -27,3 +27,13 @@
 		}
 	}
 }
+@media all and (max-width: 576px){
+	.nosotros2{
+		img{
+			order: 1;
+		}
+		div{
+			order: 2;
+		}
+	}
+}
