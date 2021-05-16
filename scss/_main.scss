@@ -165,6 +165,7 @@ body{
 			color: $grisoscuro;
 			display: flex;
 			flex-direction: column;
+			text-align: center;
 			font-style: italic;
 			text-transform: uppercase;
 			-webkit-border-radius: 10px;
@@ -200,6 +201,16 @@ body{
 		font-family: $font;
 		text-transform: uppercase;
 	}
+	.modalImg{
+		z-index: 1070;
+		text-transform: uppercase;
+		.modal-body{
+			text-align: center;
+			p{
+				color: $grismedio;
+			}
+		}		
+	}
 }		
 .wppLogo{
 	position: fixed;
@@ -222,19 +233,6 @@ body{
 	grid-template-areas: 
 	"direccion secciones redes"
 	;
-	li{
-		text-transform: uppercase;
-		list-style-type: none;
-		letter-spacing: 2px;
-		a{
-			text-decoration: none;
-			color: $grisclaro;
-			transition: 0.1s;
-			&:hover{
-				color: $grismedio;
-			}
-		}
-	}
 	.direccion{
 		grid-area: direccion;
 		display: flex;
@@ -251,6 +249,19 @@ body{
 		align-items: center;
 		flex-direction: column;
 		justify-content: space-around;
+		li{
+		text-transform: uppercase;
+		list-style-type: none;
+		letter-spacing: 2px;
+			a{
+				text-decoration: none;
+				color: $grisclaro;
+				transition: 0.1s;
+				&:hover{
+					color: $grismedio;
+				}
+			}
+		}
 	}
 	.redes{
 		grid-area: redes;
@@ -259,9 +270,10 @@ body{
 		flex-direction: column;
 		justify-content: space-around;
 		li{
-			transition: 0.1s;
-			&:hover{
-				transform: scale(1.05);
+			list-style-type: none;
+			text-transform: none;
+			img{
+				margin-right: 0.3rem;
 			}
 		}
 	}
